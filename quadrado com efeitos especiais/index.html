@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrado com efeitos especiais</title>
+    <style>
+        div {
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #333;
+            transition: all 0.4s ease;
+            box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.336);
+        }
+
+        input {
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
+            height: 30px;
+        }
+
+        p {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado"></div>
+
+    <p>Digite o nome ou o código de uma cor, ou o valor de uma borda. </p>
+    <input type="text">
+    <script>
+        let box = document.querySelector('div'),
+        input = document.querySelector('input');
+
+        input.addEventListener('input', () => {
+            box.style.borderRadius = input.value;
+            box.style.background = input.value;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pe-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Galeria de Fotos</title>
+    <style>
+        .galeria {
+            margin: auto;
+            display: flex;
+            height: 30rem;
+            gap: 1rem;
+            max-width: 900px;
+        }
+        .galeria > div {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 100%;
+            flex: 1;
+            border-radius: 20px;
+            transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+        }
+        .galeria > div:hover {
+            flex: 5;
+        }
+    </style>
+</head>
+<body>
+    <main class="galeria">
+        <div style="background-image: url('imagens/img01.jpg');"></div>
+        <div style="background-image: url('imagens/img02.jpg');"></div>
+        <div style="background-image: url('imagens/img03.jpg');"></div>
+        <div style="background-image: url('imagens/img04.jpg');"></div>
+        <div style="background-image: url('imagens/img05.jpg');"></div>
+        <div style="background-image: url('imagens/img06.jpg');"></div>
+    </main>
+</body>
+</html>
