@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,19 +28,23 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="quadrado"></div>
+    <div class="quadrado">
+    </div>
 
     <p>Digite o nome ou o código de uma cor, ou o valor de uma borda. </p>
     <input type="text">
     <script>
         let box = document.querySelector('div'),
-        input = document.querySelector('input');
+            input = document.querySelector('input');
 
         input.addEventListener('input', () => {
-            box.style.borderRadius = input.value;
-            box.style.background = input.value;
+            let value = input.value;
+            box.style.borderRadius = value;
+            box.style.background = value;
         });
     </script>
 </body>
+
 </html>
