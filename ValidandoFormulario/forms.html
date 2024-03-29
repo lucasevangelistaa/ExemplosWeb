@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validando Formulario</title>
+    <script>
+        function validarFormulario() {
+            var chave = document.getElementById("chave").value;
+            var senha = document.getElementById("senha").value;
+
+            // Verificação do campo E-mail
+            if (chave !== "1234") {
+                alert("Chave incorreta.")
+                return false
+            }
+
+            // Verificação do campo Senha
+            if (senha !== "321") {
+                alert("Senha incorreta.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validarFormulario();" action="pag02.html">
+        <label for="chave">Chave:</label>
+        <input type="text" id="chave" required placeholder="Digite sua chave de acesso."><br><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" required placeholder="Digite sua senha de acesso."><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
